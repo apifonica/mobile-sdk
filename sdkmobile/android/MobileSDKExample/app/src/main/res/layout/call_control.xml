@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7sp"
+    android:gravity="fill_horizontal"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="phone number"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        tools:layout_width="wrap_content" />
+
+    <Button
+        android:id="@+id/resumeCall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_weight="0"
+        android:background="@android:drawable/sym_action_call" />
+
+    <Button
+        android:id="@+id/holdCall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_weight="0"
+        android:background="@android:drawable/stat_sys_phone_call_on_hold" />
+
+    <Button
+        android:id="@+id/endCall"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_weight="0"
+        android:background="@android:drawable/sym_call_missed" />
+
+</LinearLayout>
