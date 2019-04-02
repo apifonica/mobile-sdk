@@ -1,6 +1,8 @@
 package com.aws.mobilesdkexample;
 
+import android.content.pm.PackageManager;
 import android.content.pm.ActivityInfo;
+import android.Manifest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -99,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.callToNumber);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO},
+                            1);
+                }
                 SdkMobile.INSTANCE.getCallClient().callToNumber(
                         ((TextView)findViewById(R.id.phoneNumber)).getText().toString()
                 );
@@ -154,5 +160,8 @@ public class MainActivity extends AppCompatActivity {
         CallsListener cl = new CallsListener(adapter);
         SdkMobile.INSTANCE.getCallClient().setCallsListener(cl);
 
+    }
+    @Override
+    public void onBackPressed() {
     }
 }
