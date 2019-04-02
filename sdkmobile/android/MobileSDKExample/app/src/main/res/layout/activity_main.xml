@@ -36,7 +36,7 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="sip:883140776463091@login.mtt.ru" />
+                    android:text="sip:48732081121@sip-eu.apifonica.com" />
                 <!--android:text="sip:883140776419396@login.mtt.ru" />-->
 
                 <EditText
@@ -45,8 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPassword"
-                    android:text="qw123456qw" />
+                    android:inputType="textPassword" />
 
                 <Button
                     android:id="@+id/activateButton"
